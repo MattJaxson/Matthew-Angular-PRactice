@@ -5,14 +5,12 @@
 <form novalidate name="myform" action="#">
 <div class="form_wrap">
   <h1></h1>
-  <input type="text" name="firstname" placeholder="First Name" ng-model="user.firstname" ng-required="true" ng-minlength="2"/>
-  <p class="error" ng-show="myform.firstname.$invalid && myform.firstname.$touched"> Please, enter your first name</p>
-  <input type="text" name="lastname" ng-model="user.lastname"placeholder="Last Name" ng-required="true"/>
-   <p class="error" ng-show="myform.lastname.$invalid && myform.lastname.$touched"> Please, enter your last name</p>
+  <input type="text" name="firstname" placeholder="User Name" ng-model="user.firstname" ng-required="true" ng-minlength="2"/>
+  <p class="error" ng-show="myform.firstname.$invalid && myform.firstname.$touched"> User Name</p>
      <input type="email" name="email"  placeholder="Email" ng-model="user.email"/>
-  <p class="error" ng-show="myform.email.$invalid && myform.psw.$touched"> Please, enter a valid email</p>
+  <p class="error" ng-show="myform.email.$invalid && myform.psw.$touched"> Email </p>
      <input type="password" name="psw" placeholder="Password" ng-model="user.password"ng-required="true" ng-minlength="6"/>
-    <p class="error" ng-show="myform.psw.$invalid && myform.psw.$touched"> Please, enter a 6 digit password</p>
+    <p class="error" ng-show="myform.psw.$invalid && myform.psw.$touched"> Please, enter password</p>
 </div>
 
 <div>

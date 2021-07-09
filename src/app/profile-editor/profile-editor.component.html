@@ -5,29 +5,26 @@
   <label for="last-name">Last Name: </label>
   <input id="last-name" type="text" formControlName="lastName">
 
-  <div formGroupName="address">
-    <h2>Address</h2>
+  <div formGroupName="Request">
+    <h2>Request Information</h2>
 
-    <label for="street">Street: </label>
-    <input id="street" type="text" formControlName="street">
+    <label for="about">Type of Program: </label>
+    <input id="about" type="text" formControlName="about">
 
-    <label for="city">City: </label>
-    <input id="city" type="text" formControlName="city">
+    <label for="organization">Organization: </label>
+    <input id="organization" type="text" formControlName="organization">
 
-    <label for="state">State: </label>
-    <input id="state" type="text" formControlName="state">
-
-    <label for="zip">Zip Code: </label>
-    <input id="zip"type="text" formControlName="zip">
+    <label for="purpose">Purpose of program: </label>
+    <input id="purpose"type="text" formControlName="purpose">
   </div>
 
-  <div formArrayName="aliases">
-    <h2>Aliases</h2>
-    <button (click)="addAlias()">+ Add another alias</button>
+  <div formArrayName="Skills">
+    <h2>Skills</h2>
+    <button (click)="addAlias()">+ Add skills</button>
 
     <div *ngFor="let alias of aliases.controls; let i=index">
       <!-- The repeated alias template -->
-      <label for="alias-{{ i }}">Alias:</label>
+      <label for="alias-{{ i }}">Skills:</label>
       <input id="alias-{{ i }}" type="text" [formControlName]="i">
     </div>
   </div>
@@ -43,11 +40,5 @@
 
 <p>Form Status: {{ profileForm.status }}</p>
 
-<button (click)="updateProfile()">Update Profile</button>
+<button (click)="updateProfile()">Update request</button>
 
-
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
--->
